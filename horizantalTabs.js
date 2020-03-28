@@ -6,10 +6,18 @@ function openPage(pageName,element){
     }
     tablinks=document.getElementsByClassName("tablink");
     for(i=0;i<tablinks.length;i++){
-        tablinks[i].style.backgroundColor="";
+        tablinks[i].style.backgroundColor="deepskyblue";
+        tablinks[i].style.color="white";
+        tablinks[i].style.borderStyle="solid";
+        tablinks[i].style.borderColor="deepskyblue";
+        tablinks[i].style.outline="none";
+
+
     }
     document.getElementById(pageName).style.display="block";
-    element.style.backgroundColor= "deepskyblue";
+    element.style.backgroundColor= "white";
+    element.style.color="deepskyblue";
+    element.style.outline="none";
 }
 
 
