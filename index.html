@@ -1,17 +1,70 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
-    <title>MyBlog</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+      <title>
+          My Home Page
+      </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="text/javascript" src="horizantalTabs.js"></script>
   </head>
-  <body> 
-    <main>
-      <h1>Welcome to MyBlog</h1>
-      <figure>
-        <img src="manideep.png" align="right" width="600" height="400">
-        <!--<figcaption>Manideep Ladi</figcaption>-->
-      </figure>
-      
-    </main>
+  <body>
+    <h1>
+        Welcome!
+    </h1>
+    <button class="tablink" onclick="openPage('blog',this)" id="defaultOpen">Blog</button>
+    <button class="tablink" onclick="openPage('about_me',this)" >About me</button>
+    <button class="tablink" onclick="openPage('contact_me',this)">Contact details</button>
+    <button class="tablink" onclick="openPage('gallery',this)" >Gallery</button>
+  <!-- create tab content-->
+    <div id="blog" class="tabcontent">
+        <h3>Ideas and their origin</h3>
+<!--        <img src="./manideep.png">-->
+        <p> My name is Manideep Ladi. I completed my B.Tech in National Institute of Technology, Agartala.</p>
+    </div>
+    <div id="about_me" class="tabcontent">
+        <h3>About me</h3>
+        <p><img src="manideep.png" id="aboutMeImg">My name is Manideep Ladi. I completed my B.Tech in National Institute of Technology, Agartala.</p>
+    </div>
+    <div id="contact_me" class="tabcontent">
+        <h3>Fill the form to get in touch with me!</h3>
+        <div class="container">
+            <form onsubmit="alertFunction(firstname,whatsappNo,emailAddress)">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="whatsappNo">Whatsapp Number</label>
+                <input type="text" id="whatsappNo" name="whatsappNo" placeholder="Will ping you there" required>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="emailAddress" placeholder="Your email details" required>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div id="gallery" class="tabcontent">
+            <h1>My Gallery</h1>
+            <p></p>
+        <div class="row">
+            <div class="column">
+                <img src="manideep.png">
+                <img src="images2.jpeg">
+            </div>
+            <div class="column">
+                <img src="manideep.png">
+                <img src="manideep.png">
+            </div>
+            <div class="column">
+                <img src="manideep.png">
+            </div>
+        </div>
+    </div>
+    <script>document.getElementById("defaultOpen").click();</script>
   </body>
 </html>
