@@ -52,10 +52,16 @@ button.active {
     opacity:1;
 
 }
+.indentation{
+    text-indent:2em;
+}
+.indentation1em{
+    text-indent: 1em;
+}
 #aboutMeImg{
     float:right;
     width:300px;
-    height:300px;
+    height:200px;
 }
 input[type=text], select, textarea {
     width: 100%;
