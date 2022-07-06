@@ -1,25 +1,27 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-      <title>
-          My Home Page
-      </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <script type="text/javascript" src="horizantalTabs.js"></script>
-  </head>
-  <body>
+
+<head>
+    <title>
+        My Home Page
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="horizantalTabs.js"></script>
+</head>
+
+<body>
     <h1>
         Welcome!
     </h1>
     <button class="tablink" onclick="openPage('home',this)" id="defaultOpen">Home</button>
-    <button class="tablink" onclick="openPage('about_me',this)" >About me</button>
+    <button class="tablink" onclick="openPage('about_me',this)">About me</button>
     <button class="tablink" onclick="openPage('contact_me',this)">Contact me  </button>
-    <button class="tablink" onclick="openPage('gallery',this)" >Gallery</button>
-  <!-- create tab content-->
+    <button class="tablink" onclick="openPage('gallery',this)">Other links</button>
+    <!-- create tab content-->
     <div id="home" class="tabcontent">
         <h3>Ideas and their origin</h3>
-<!--        <img src="./manideep.png">-->
+        <!--        <img src="./manideep.png">-->
         <p> My name is Manideep Ladi. I completed my B.Tech in National Institute of Technology, Agartala.</p>
     </div>
     <div id="about_me" class="tabcontent">
@@ -28,23 +30,23 @@
         <p class="indentation"><img src="manideep.png" id="aboutMeImg"> Myself <strong>Manideep Ladi </strong> currently working in <strong>Zemoso Technologies</strong> as Software engineer.</p>
         <h4>Technical Abilites & Skills</h4>
         <p>
-          <ul>
-            <li>Working knowledge of Java, Html, Css, Javascript, C, C++, Python, Sql.</li>
-            <li>Working knowledge of different repositories like Github,BitBucket,Svn.</li>
-            <li>Through understanding of subjects like DataStructure, Operating Systems, Computer Architecture.</li>
-            <li>Also had good theoritical knowledge on DataScience.</li>
+            <ul>
+                <li>Working knowledge of Java, Html, Css, Javascript, C, C++, Python, Sql.</li>
+                <li>Working knowledge of different repositories like Github,BitBucket,Svn.</li>
+                <li>Through understanding of subjects like DataStructure, Operating Systems, Computer Architecture.</li>
+                <li>Also had good theoritical knowledge on DataScience.</li>
 
-          </ul>
+            </ul>
         </p>
         <h4>Professional Experience</h4>
         <p class="indentation"> I worked in <strong>ADP Pvt LTD</strong> as Java developer for 25 months. In ADP I was part of architect team for HR & Payroll product called Enterprise.
             <h5 class="indentation1em">Key Accomplishments</h5>
             <p>
-              <ul>
-                <li>Designed, implemented and integrated fraud prevention feature in the product to provide 2-factor Authentication service to the clients.</li>
-                <li>Analyzed and implemented SingleCore project for multiple versions of product to make product versionless which helps us in maintaining and developing new features.</li>
-                <li>Debugging and fixing several production defects.</li>
-              </ul>
+                <ul>
+                    <li>Designed, implemented and integrated fraud prevention feature in the product to provide 2-factor Authentication service to the clients.</li>
+                    <li>Analyzed and implemented SingleCore project for multiple versions of product to make product versionless which helps us in maintaining and developing new features.</li>
+                    <li>Debugging and fixing several production defects.</li>
+                </ul>
             </p>
         </p>
         <h4>Personal details</h4>
@@ -53,7 +55,7 @@
     <div id="contact_me" class="tabcontent">
         <h3>Fill the form to get in touch with me!</h3>
         <div class="container">
-            <form onsubmit="alertFunction(firstname,whatsappNo,emailAddress)">
+            <form action="https://formsubmit.co/manideep218@gmail.com" method="POST">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
@@ -65,16 +67,16 @@
                 <label for="email">Email</label>
                 <input type="text" id="email" name="emailAddress" placeholder="Your email details" required>
 
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
 
                 <input type="submit" value="Submit">
             </form>
         </div>
     </div>
     <div id="gallery" class="tabcontent">
-            <h1>My Gallery</h1>
-            <p></p>
+        <h1>My Gallery</h1>
+        <p></p>
         <div class="row">
             <div class="column">
                 <img src="manideep.png">
@@ -89,6 +91,9 @@
             </div>
         </div>
     </div>
-    <script>document.getElementById("defaultOpen").click();</script>
-  </body>
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
 </html>
